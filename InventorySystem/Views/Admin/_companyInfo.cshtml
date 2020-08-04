@@ -1,0 +1,271 @@
+﻿  <!-- Select 2 style -->
+<link href="~/Asset/plugins/select2/css/select2.min.css" rel="stylesheet" />
+<style type="text/css">
+    .required:after {
+        content: " *";
+        color: red;
+    }
+
+    table {
+        border-radius: 5px;
+        margin-right:5%;
+    }
+
+    caption {
+        caption-side: top;
+        padding-top:0.2em;
+        padding-bottom:0.2em;
+    }
+</style>
+<div class="row">
+    <div class="col-md-7" >
+        <div class="row">
+            <table width="100%">
+                <caption>Company Information</caption>
+                <tbody>
+                    <tr>
+                        <td width="40%"><label class="required"> Company Name </label></td>
+                        <td colspan="3" width="60%">
+                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required"> Company Short Name </label></td>
+                        <td colspan="3">
+                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required"> Description </label></td>
+                        <td colspan="3">
+                            <textarea type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required"> Index Prefix </label></td>
+                        <td colspan="3">
+                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required">Nature Of Business </label></td>
+                        <td colspan="3">
+                            <select class="form-control form-control-sm">
+                                <option>Garments</option>
+                                <option>USD</option>
+                                <option>SGB</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required">Company Currency </label></td>
+                        <td colspan="3">
+                            <select class="form-control form-control-sm">
+                                <option>BDT</option>
+                                <option>USD</option>
+                                <option>SGB</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required"> Reporting Currency </label></td>
+                        <td colspan="3">
+                            <select class="form-control form-control-sm">
+                                <option>BDT</option>
+                                <option>USD</option>
+                                <option>SGB</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="required">Payment User group : </label></td>
+                        <td colspan="3">
+                            <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table width="100%">
+                <caption>Company Details</caption>
+                <tr>
+                    <td width="40%"><label class="required">No Of Employees : </label></td>
+                    <td colspan="3" width="60%">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> PAN Number:  </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> VAT Number: </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> TIN No: </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required">Ragistration No:  </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> Trade Licence No </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+            </table>
+            <table width="100%">
+                <caption>Contact Information</caption>
+                <tr>
+                    <td width="40%"><label> Contact Person : </label></td>
+                    <td colspan="3" width="60%">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Company Address: </label></td>
+                    <td colspan="3">
+                        <textarea class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> City :  </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required">State/Province :  </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Zip</label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Country: </label></td>
+                    <td colspan="3">
+                        <select id="selectCountry" class="form-control form-control-sm" >
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Telephone 1 : </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Telephone 2: </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Fax : </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Email: </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Company Website Url</label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Remarks: </label></td>
+                    <td colspan="3">
+                        <textarea class="form-control form-control-sm" id="exampleInputEmail1" placeholder="Enter First Name"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="row">
+            <table width="100%">
+                <caption>Company logo upload</caption>
+                <tr>
+                    <td valign="top">Company Logo :</td>
+                    <td><img height="100" width="100" /></td>
+                    <td valign="bottom">
+                        <input type="file" class="form-control form-control-sm" />
+                    </td>
+                </tr>
+            </table>
+            <table class="table table-striped" width="100%">
+                <caption >Business Unit   <button style="float:right" data-toggle="modal" data-target="#modal-default" class="btn btn-success btn-sm" onclick="showUnit()"><i class="fa fa-plus-circle">Add Unit</i></button></caption>
+                <thead>
+                    <tr>
+                        <th>Unit Code</th>
+                        <th>Unit Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-default" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="padding:0.5em">
+                <strong class="modal-title">Add Business Unit</strong>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">x</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer justify-content-between" style="padding:0">
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-sm">Save Unit</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- country script -->
+<script src="~/Scripts/common-script.js"></script>
+<!-- Select 2 script -->
+<script src="~/Asset/plugins/select2/js/select2.min.js"></script>
+<script type="text/javascript">
+    GetAllCountry(1, '#selectCountry');
+    var options = {
+        'templateSelection': custom_template,
+        'templateResult': custom_template,
+        placeholder : "Select a Country",
+    }
+    $("#selectCountry").select2({
+        placeholder:"Select a Country",
+        templateSelection : custom_template,
+        templateResult : custom_template,
+    });
+    function showUnit() {
+        $('.modal-body').load('@Url.Action("_addUnitView","Admin")');
+    }
+    
+</script>

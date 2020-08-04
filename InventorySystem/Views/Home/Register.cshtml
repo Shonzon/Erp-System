@@ -1,0 +1,303 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inventory System| Registration Page</title>
+    <link rel="icon" href="~/Image/autocad-inventory.png" type="image/x-icon">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Asset/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="~/Asset/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Asset/dist/css/adminlte.min.css">
+    <!-- Sweet alert style -->
+    <link href="~/Asset/plugins/sweetalert2/sweetalert2.min.css" rel="stylesheet" />
+    <!-- Select 2 style -->
+    <link href="~/Asset/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <style>
+        label:not(.form-check-label):not(.custom-file-label) {
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        label {
+            margin-bottom: 2px;
+            padding-right: 5px;
+        }
+
+        .register-card-body {
+            border-radius: 6px;
+        }
+
+        .register-page {
+            background-image: url('../../Image/warehouse.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="hold-transition register-page">
+    <div class="register-box" style="width:50%">
+        <div class="register-logo">
+            <a href="#"><b>Inventory</b>System</a>
+        </div>
+        <div class="card">
+            <div class="card-body register-card-body">
+                <p class="login-box-msg">Register a new membership For 15 days Trail</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>User Name</label>
+                        <div class="input-group">
+                            <input type="text" id="register-userName" class="form-control form-control-sm" placeholder="Enter User Name">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>User Email</label>
+                        <div class="input-group">
+                            <input type="email" id="registration-email" class="form-control form-control-sm" placeholder="Enter Email Here">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>User Phone Number</label>
+                        <div class="input-group">
+                            <input type="number" id="registration-number" class="form-control form-control-sm" placeholder="Enter Phone Number">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-phone"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>User Password</label>
+                        <div class="input-group">
+                            <input type="password" id="registration-password" class="form-control form-control-sm" placeholder="Enter Password Here">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>Confirm Passowd</label>
+                        <div class="input-group">
+                            <input type="password" id="registration-confirmpassword" class="form-control form-control-sm" placeholder="Re Type Password Here">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Company Name</label>
+                        <div class="input-group">
+                            <input type="text" id="register-companyname" class="form-control form-control-sm" placeholder="Enter Company Name">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fa fa-building"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>Company Address</label>
+                        <div class="input-group">
+                            <input type="text" id="register-companyaddress" class="form-control form-control-sm" placeholder="Enter Company Address">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-address-book"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>Country</label>
+                        <div class="input-group">
+                            <select id="selectCountry" class="form-control form-control-sm">
+                            </select>
+                        </div>
+                        <label>Nature of Business</label>
+                        <div class="input-group">
+                            <select id="natureOfbusiness" class="form-control form-control-sm">
+                                <option value="1">Hello</option>
+                                <option value="2">Female</option>
+                                <option value="3">Others</option>
+                            </select>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-check"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <label>Upload Company Logo</label>
+                        <div class="input-group">
+                            <input type="file" id="register-companylogo" class="form-control form-control-sm" placeholder="Upload Company Logo">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-upload"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label>Select Module for trail</label>
+                    <div class="input-group">
+                        <div class="form-inline form-check" id="moduleIdchecked">
+                            <input name="moduleCheck" class="form-check-input" checked type="checkbox" value="1">
+                            <label class="form-check-label">Sales </label>
+                            <input name="moduleCheck" class="form-check-input" checked type="checkbox" value="2">
+                            <label class="form-check-label">Sourcing </label>
+                            <input name="moduleCheck" class="form-check-input" checked type="checkbox" value="3">
+                            <label class="form-check-label">Inventory </label>
+                            <input name="moduleCheck" class="form-check-input" checked type="checkbox" value="4">
+                            <label class="form-check-label">Logistic </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" id="agreeTerms" name="terms" value="agree">
+                            <label for="agreeTerms">
+                                I agree to the <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-4">
+                        <button type="button" onclick="UploadLogo()" class="btn btn-primary btn-sm btn-block swalDefaultWarning">Register</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+
+                @*<div class="social-auth-links text-center">
+                        <p>- OR -</p>
+                        <a href="#" class="btn btn-block btn-primary">
+                            <i class="fab fa-facebook mr-2"></i>
+                            Sign up using Facebook
+                        </a>
+                        <a href="#" class="btn btn-block btn-danger">
+                            <i class="fab fa-google-plus mr-2"></i>
+                            Sign up using Google+
+                        </a>
+                    </div>*@
+
+                @Html.ActionLink("I already have a membership", "Index", "Home")
+            </div>
+            <!-- /.form-box -->
+        </div><!-- /.card -->
+    </div>
+    <!-- /.register-box -->
+    <!-- jQuery -->
+    <script src="~/Asset/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="~/Asset/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="~/Asset/dist/js/adminlte.min.js"></script>
+    <!-- country script -->
+    <script src="~/Scripts/common-script.js"></script>
+    <!-- Select 2 script -->
+    <script src="~/Asset/plugins/select2/js/select2.min.js"></script>
+    <!-- Sweet alert 2 script -->
+    <script src="~/Asset/plugins/sweetalert2/sweetalert2.min.js"></script>
+    <script type="text/javascript">
+        GetAllCountry(1,'#selectCountry');
+        var options = {
+        'templateSelection': custom_template,
+        'templateResult': custom_template,
+        }
+        $("#selectCountry").select2(options);
+        function RegisterUser(fileUpload) {
+            var JsonData = {};
+            var UserInfo = {};
+            UserInfo["UserName"] = $("#register-userName").val();
+            UserInfo["UserEmail"] = $("#registration-email").val();
+            UserInfo["UserPhoneNo"] = $("#registration-number").val();
+            UserInfo["UserPassword"] = $("#registration-password").val();
+            var CompanyInfo = {};
+            CompanyInfo["CompanyName"] = $("#register-companyname").val();
+            CompanyInfo["CompanyAddress"] = $("#register-companyaddress").val();
+            CompanyInfo["CountryId"] = $("#selectCountry").val();
+            CompanyInfo["NatureOfBusinessId"] = $("#natureOfbusiness").val();
+            CompanyInfo["CompanyLogoName"] = fileUpload.FileName;
+            CompanyInfo["CompanyLogoPath"] = fileUpload.FileUploadPath;
+            CompanyInfo["CompanyServerName"] = fileUpload.ServerFileName;
+            var ModuleArray = [];
+            $("#moduleIdchecked input:checked").each(function(){
+                var module = {};
+                module["ModuleId"] = $(this).val();
+                ModuleArray.push(module);
+            })
+
+            JsonData["Message"] = "UserRegistration";
+            JsonData["UserInformation"] = UserInfo;
+            JsonData["CompanyModel"] = CompanyInfo;
+            JsonData["UserModuleList"] = ModuleArray;
+
+            var urlpath = '@Url.Action("SaveUserRegistration", "Home")';
+            $.ajax({
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(JsonData),
+                dataType: 'json',
+                url: urlpath,
+                type: "Post",
+                async: true,
+                success: function (data) {
+                    if (data.PrimaryKey > 0) {
+                        Swal.fire({
+                          position: 'top-end',
+                          icon: 'success',
+                          title: 'User Registraion Successfully ',
+                          showConfirmButton: true,
+                        })
+                    } else {
+                        Swal.fire({
+                          position: 'top-end',
+                          icon: 'error',
+                          title: 'Some Error Occoured',
+                          showConfirmButton: true,
+                        })
+                    }
+                }
+            });
+
+        }
+        function UploadLogo() {
+            var fileData = new FormData();
+            var fileUpload = $("#register-companylogo").prop('files');
+            for (var i = 0; i < fileUpload.length; i++) {
+                fileData.append(fileUpload[i].name, fileUpload[i]);
+            }
+            fileData.append('folderNo', "1");
+            var urlpath = '@Url.Action("UploadLogoOrFile", "Home")';
+            $.ajax({
+                url: urlpath,
+                type: "post",
+                processData: false,
+                contentType: false,
+                data: fileData  ,
+                success: function (result) {
+                    RegisterUser(result);
+                },
+                error: function (err) {
+                    alert(err.responseText);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+

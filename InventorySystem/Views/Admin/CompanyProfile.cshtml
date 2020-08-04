@@ -1,0 +1,48 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <div class="card card-warning card-outline card-outline-tabs">
+        <div class="card-header p-0 border-bottom-0">
+            <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="custom-tabs-for-company-tab" data-toggle="pill" href="#" role="tab" aria-controls="custom-tabs-for-company" onclick="ChangeTab('_companyInfo', 1)" aria-selected="true">Company Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#" role="tab" aria-controls="custom-tabs-for-company" aria-selected="false">Address Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-four-messages-tab" data-toggle="pill" href="#" role="tab" aria-controls="custom-tabs-for-company" aria-selected="false">Bank Information</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body text-sm">
+            <div class="tab-content" id="custom-tabs-four-tabContent">
+                <div class="tab-pane fade active show" id="custom-tabs-for-company" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+
+                </div>
+            </div>
+        </div>
+        <!-- /.card -->
+    </div>
+
+    <script type="text/javascript">
+    ChangeTab("_companyInfo", 1);
+    function ChangeTab(viewName,viewNo) {
+         var urlpath = '@Url.Action("ChangeTab", "Admin")';
+            $.ajax({
+                url: urlpath,
+                type: "Post",
+                data: { ViewName: viewName, ViewNo: viewNo },
+                async: true,
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('access_token')
+                },
+                success: function (result) {
+                    $("#custom-tabs-for-company").empty();
+                    $("#custom-tabs-for-company").append(result);
+                },error: function(xhr, status, error) {
+                      alert(error);
+                }
+            });
+    }
+    </script>
+}

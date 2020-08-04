@@ -1,0 +1,227 @@
+﻿<link href="~/Asset/plugins/bootstrap-toggle/css/bootstrap-toggle.min.css" rel="stylesheet" />
+<style type="text/css">
+    .required:after {
+        content: " *";
+        color: red;
+    }
+    caption {
+        caption-side: top;
+        padding-top:0.2em;
+        padding-bottom:0.2em;
+    }
+</style>
+<div class="row">
+    <div class="col-md-6">
+        <div class="row">
+            <table width="100%">
+                <tr>
+                    <td><label class="required"> First Name </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="userFirstName" placeholder="Enter First Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> Last Name </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="userLastName" placeholder="Enter Last Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> User Name </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="userName" placeholder="Enter User Name">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> User Email </label></td>
+                    <td colspan="3">
+                        <input type="email" class="form-control form-control-sm" id="userEmail" placeholder="Enter User Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required">Password </label></td>
+                    <td colspan="3">
+                        <input type="password" class="form-control form-control-sm" id="userPassword" placeholder="Enter Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> Confirm Password </label></td>
+                    <td colspan="3">
+                        <input type="password" class="form-control form-control-sm" id="userConfirmPassword" placeholder="Enter Confirm Password">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> User Phone Number  </label></td>
+                    <td colspan="3">
+                        <input type="number" class="form-control form-control-sm" id="userPhoneNumber" placeholder="Enter Phone Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Employee Code </label></td>
+                    <td colspan="3">
+                        <input type="text" class="form-control form-control-sm" id="userEmployeeCode" placeholder="Enter Employee Code">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="required"> Gender</label></td>
+                    <td colspan="3">
+                        <select class="form-control form-control-sm" id="userGender">
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Others</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Department </label></td>
+                    <td colspan="3">
+                        <select class="form-control form-control-sm" id="userDepartmrnt">
+                            <option value="1">Admin</option>
+                            <option value="2">Shipping and Logistic</option>
+                            <option value="3">Sales</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Default Company </label></td>
+                    <td colspan="3">
+                        <select class="form-control form-control-sm" id="userDefaultCompany">
+                            <option value="1">Company A</option>
+                            <option value="2">Company B</option>
+                            <option value="3">Company C</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Default Business Unit </label></td>
+                    <td colspan="3">
+                        <select class="form-control form-control-sm" id="userDefaultBu">
+                            <option value="1">Business Unit A</option>
+                            <option value="2">Business Unit B</option>
+                            <option value="3">Business Unit C</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label> Manager </label></td>
+                    <td colspan="3">
+                        <select class="form-control form-control-sm" id="userIsManager">
+                            <option value="1">Manager A</option>
+                            <option value="2">Manager B</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Active User </label></td>
+                    <td>
+                        <input id="userActive" type="checkbox" checked data-toggle="toggle" data-width="100" data-on="Yes" data-off="No" data-size="small" data-onstyle="success">
+                    </td>
+                    <td>
+                        <label> Admin User </label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="userAdmin" data-toggle="toggle" data-width="100" data-on="Yes" data-off="No" data-size="small" data-onstyle="success">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <br />
+                        <input type="button" onclick="UploadAndAddUser()" value="Add New User" class="btn btn-success form-control form-control-sm" />
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
+        <div class="row">
+            <table width="100%">
+                <caption>User Profile Picture </caption>
+                <tr>
+                    <td valign="top">Profile Picture :</td>
+                    <td><img height="100" id="propicDiv" width="100" /></td>
+                    <td valign="bottom">
+                        <input type="file" onchange="readURL(this,'#propicDiv')" id="userProfilePic" class="form-control form-control-sm" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap Switch -->
+<script src="~/Asset/plugins/bootstrap-toggle/js/bootstrap-toggle.min.js"></script>
+<script type="text/javascript">
+    function AddNewEmployee(profilepic) {
+            var UserInfo = {};
+            UserInfo["UserFirstName"] = $("#userFirstName").val();
+            UserInfo["UserLastName"] = $("#userLastName").val();
+            UserInfo["UserName"] = $("#userName").val();
+            UserInfo["UserEmail"] = $("#userEmail").val();
+            UserInfo["UserPassword"] = $("#userPassword").val();
+            UserInfo["EmployeeCode"] = $("#userEmployeeCode").val();
+            UserInfo["GenderId"] = $("#userGender").val();
+            UserInfo["DepartmentId"] = $("#userDepartmrnt").val();
+            UserInfo["DefaultCompanyId"] = $("#userDefaultCompany").val();
+            UserInfo["DefaultBusinessUnitId"] = $("#userDefaultBu").val();
+            UserInfo["ManagerId"] = $("#userIsManager").val();
+            if ($("#userActive").is(":checked")) {
+                UserInfo["IsActive"] = true;
+            } else {
+                UserInfo["IsActive"] = false;
+            }
+            if ($("#userAdmin").is(":checked")) {
+                UserInfo["IsAdmin"] = true;
+            } else {
+                UserInfo["IsAdmin"] = false;
+            }
+            UserInfo["UserPhoneNo"] = $("#UserPhoneNumber").val();
+            UserInfo["UserProPicName"] = profilepic.FileName;
+            UserInfo["UserProPicPath"] = profilepic.FileUploadPath;
+            UserInfo["UserProPicServerName"] = profilepic.ServerFileName;
+             var urlpath = '@Url.Action("AddNewUser", "Admin")';
+            $.ajax({
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(UserInfo),
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('access_token')
+                },
+                dataType: 'json',
+                url: urlpath,
+                type: "Post",
+                async: true,
+                success: function (data) {
+                    if (data.PrimaryKey > 0) {
+                        alert(data.PrimaryKey);
+                    } else {
+                        alert("Not Ok");
+                    }
+                }, error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+    }
+    function UploadAndAddUser() {
+        var fileData = new FormData();
+        var fileUpload = $("#userProfilePic").prop('files');
+        for (var i = 0; i < fileUpload.length; i++) {
+            fileData.append(fileUpload[i].name, fileUpload[i]);
+        }
+        fileData.append('folderNo', 2);
+        var urlpath = "/Home/UploadLogoOrFile";
+        $.ajax({
+            url: urlpath,
+            type: "post",
+            processData: false,
+            contentType: false,
+            data: fileData,
+            success: function (result) {
+                AddNewEmployee(result);
+            },
+            error: function (err) {
+                alert(err.responseText);
+            }
+        });
+}
+</script>
